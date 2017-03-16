@@ -113,20 +113,20 @@ func TestToStringOther(t *testing.T) {
 
 	value = "abc"
 	if actualValue, expectedValue := ToString(value), "abc"; actualValue != expectedValue {
-		t.Errorf("Got ", args ...interface{})
+		t.Errorf("Got %v expected %v", actualValue, expectedValue)
 	}
 
 	value = true
-	if actualValue, expectedValue := ToString(value), "abc"; actualValue != expectedValue {
-		t.Errorf("Got ", args ...interface{})
+	if actualValue, expectedValue := ToString(value), "true"; actualValue != expectedValue {
+		t.Errorf("Got %v expected %v", actualValue, expectedValue)
 	}
 
 	type T struct {
-		id	int
-		name	string
+		id   int
+		name string
 	}
 
 	if actualValue, expectedValue := ToString(T{1, "abc"}), "{id:1 name:abc}"; actualValue != expectedValue {
-		t.Errorf("Got ", args ...interface{})
+		t.Errorf("Got %v expected %v", actualValue, expectedValue)
 	}
 }

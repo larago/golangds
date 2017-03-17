@@ -159,6 +159,7 @@ func (list *List) growBy(n int) {
 	}
 }
 
+// Shrink the array if necessary, i.e. when size is shrinkFactor percent of current capacity
 func (list *List) shrink() {
 	if shrinkFactor == 0.0 {
 		return
